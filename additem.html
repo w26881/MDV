@@ -11,7 +11,7 @@
 		<meta name="description" content="Manage your special relationships with Little Black Book" />
 		<meta name="robots" content="index, follow" />
 		<meta name="viewport" content="user-Scalable=no, width=device-width" />
-		
+		<link rel="stylesheet" href="styles.css" type="text/css" />
 		<!--Page Title-->
 		<title>Little Black Book</title>
 		
@@ -23,7 +23,7 @@
           <fieldset>
             <legend><h2>Add a Relationship</h2></legend>
               <ul>
-              	<li id= "select"><label for="status">Status</label> /></li>
+              	<li id= "select"><label for="status">Status</label></li>
               		<!--<select id="status">
               			<option value="Ex">Ex</option>
               			<option value="Current">Current</option>
@@ -31,10 +31,10 @@
               		</select>-->
               	
                 <li><label for="name" >Name:</label><input type="text" id="name" /></li>
-                <li><label for="attraction" >Attraction Level:</label><input type="range" id="attraction" required min="0" max="250" value="0" step="10"  /></li>
+                <li><label for="attraction" >Attraction Level:</label><br /><input type="range" id="attraction" required min="0" max="250" value="0" step="10"  /></li>
                 <li><label for="birthdate" >Birth Date:</label><input type="date" id="birthdate" placeholder="mm/dd/yyyy" /></li>
                 <li><input type=checkbox checked value="Single" id="single" /><label for="single">Single</label></li>
-                <li><label for="notes" >Notes:</label><textarea id="notes" placeholder="favorite flower, last gift given etc..."></textarea></li>
+                <li><label for="notes" >Notes:</label><br /><textarea id="notes" placeholder="favorite flower, last gift given etc..."></textarea></li>
                 <li><input type=hidden value="true" /></li>
               </ul>
           
@@ -45,6 +45,6 @@
         
             <small><a href="#" data-role="button" id="clearData" onclick="clearStorage()">Clear Stored Data</a>          <a href="#" data-role="button" id="displayData" onclick="displayData()">Display Data</a></small>
        
-	
+            <script type="text/javascript" src="main.js"></script>
 	</body>
 </html>

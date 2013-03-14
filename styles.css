@@ -2,3 +2,41 @@
 Kevin Tresemer
 VFW 1303*/
 
+body {
+	background:lightgrey;
+}
+h1 {
+
+	background-image: -webkit-linear-gradient(top, lightgrey 0%, grey 90%);
+	font-size:32px;
+	font-family:Helvetica;
+	text-align:center;
+	text-shadow:2px 2px #FFFFFF;
+	margin-bottom:-1px;
+	outline:2px solid black;
+	letter-spacing:0.1cm;
+	padding:15px;
+}
+
+h2 {
+
+	font-size:22px;
+	font-family:Helvetica;
+	text-align:center;
+	margin-bottom:-1px;
+	letter-spacing:0.1cm;
+	padding:15px;
+}
+
+button {
+
+	background-image: -webkit-linear-gradient(top, lightgrey 0%, grey 90%);
+	font-size:15px;
+	font-family:Helvetica;
+	text-align:center;
+	margin-bottom:-1px;
+	outline:2px solid black;
+	letter-spacing:0.1cm;
+	padding:15px;
+	
+}

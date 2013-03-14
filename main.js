@@ -14,26 +14,28 @@ window.addEventListener("DOMContentLoaded", function() {
 	function makeStatus(){
 		var formTag = document.getElementsByTagName("form"),
 			  selectLi = $("select"),
-			  makeSelectElement = document.createElement("select"),
+			  makeSelectElement = document.createElement("select");
 			  makeSelectElement.setAttribute("id", "status");
-		for (var i=0, j=status.length; i<j; i++){
+		for (var i=0, j=statusChoice.length; i<j; i++){
 			  var makeOptionElement = document.createElement("option");
-			  var optionText = status[i];
+			  var optionText = statusChoice[i];
 			  makeOptionElement.setAttribute("value", optionText);
-			  makeOptionElement
+			  makeOptionElement.innerHTML = optionText;
+			  makeSelectElement.appendChild(makeOptionElement);
 		}
+		selectLi.appendChild(makeSelectElement);
 	}
 	
 	
 	
 	
 	//Variable Defaults
-	var status = ["Ex", "Current", "Prospect"];
-	
+	var statusChoice = ["-MakeChoice-", "Ex", "Current", "Prospect"];
+	makeStatus();
 	
 	
 	//Set Link and Submit Events
-	var displayLink = $("");
+	//var displayLink = $("");
 	
 	
 	
