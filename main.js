@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		var id = Math.floor(Math.random()*1000001);
 		getCheckboxValue();
 		var item 				= {};
-			item.status          =["Status:", $("status").value];
+			item.status      = ["Status:", $("status").value];
 			item.name 		= ["Name: ", $("name").value];
 			item.attraction	= ["Attraction Level: ", $("attraction").value];
 			item.single		= ["Single: ", singleValue];
@@ -123,31 +123,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	clearButton.addEventListener("click", clearLocal);
 	var save = $("storeData");
 	save.addEventListener("click", saveData);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 });

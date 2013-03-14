@@ -44,7 +44,7 @@ button {
 form {
 	background:lightgrey;
 	outline:4px solid black;
-	padding:10px;
+	padding:5px;
 
 }
 
@@ -68,4 +68,25 @@ legend {
 fieldset {
 	border-radius: 5px;
 	box-shadow: 1px 1px grey;
+}
+
+li {
+	list-style-position: inside;
+	font-family:Helvetica;
+}
+
+textarea {
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(top, #FFF 0%, grey 95%);
+	box-shadow: 1px 1px grey;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+color: white;
+}
+
+.centerize {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
