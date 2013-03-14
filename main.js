@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	function $(x){
 		var getElement = document.getElementById(x);
 		return getElement;
-	};
+	}
 	
 	function makeStatus(){
 		var formTag = document.getElementsByTagName("form"),
@@ -24,7 +24,8 @@ window.addEventListener("DOMContentLoaded", function() {
 			  makeSelectElement.appendChild(makeOptionElement);
 		}
 		selectLi.appendChild(makeSelectElement);
-	};
+	} 
+	
 	
 	function getCheckboxValue() {
 		if ($("single").checked) {
@@ -32,52 +33,52 @@ window.addEventListener("DOMContentLoaded", function() {
 		}else{
 			single = "No";
 		}
-	};
+	}
 	
-	function toggleControls (n) {
-	switch(n){
+	function toggleControls (x) {
+	switch(x){
 		case "on":
 		    $("relForm").style.display ="none";
-		   $("showData").style.display = "none";
+		    $("showData").style.display = "none";
 			$("clearData").style.display = "inline";
 			$("addNew").style.display = "inline";
-			$("saveData").style.display = "none";
+			$("storeData").style.display = "none";
 			break;
 		case "off":
 		    $("relForm").style.display ="block";
 		    $("showData").style.display = "inline";
 			$("clearData").style.display = "inline";
 			$("addNew").style.display = "none";
-			$("saveData").style.display = "inline";
+			$("storeData").style.display = "inline";
 			$("items").style.display = "none";
 			break;  
 		 default:
 		    return false;    
 		}
-	};
+	}
 	
 	function saveData() {
-		var id = Math.floor(Math.random()*10001);
+		var id = Math.floor(Math.random()*1000001);
 		getCheckboxValue();
 		var item 				= {};
+			item.status          =["Status:", $("status").value];
 			item.name 		= ["Name: ", $("name").value];
-			item.attraction			= ["Attraction Level: ", $("attraction").value];
+			item.attraction	= ["Attraction Level: ", $("attraction").value];
 			item.single		= ["Single: ", singleValue];
-			item.birthdate		= ["Birth Date: ", $("birthdate").value];
+			item.birthdate	= ["Birth Date: ", $("birthdate").value];
 			item.notes		= ["Notes: ", $("notes").value];
 
 			localStorage.setItem(id, JSON.stringify(item));
 			alert("Relationship Saved!");
-	};
+	}
 	
 	function getData() {
-		toggle("on");
+		toggleControls("on");
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
-		var makeList = document.createElement("ul");
-		makeDiv.appendChild(makeList);
+		var getList = document.createElement("ul");
+		makeDiv.appendChild(getList);
 		document.body.appendChild(makeDiv);
-		
 		$("items").style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++) {
 			var getLi = document.createElement("li");
@@ -95,8 +96,20 @@ window.addEventListener("DOMContentLoaded", function() {
 				getSubLi.innerHTML = subTxt;
 			}
 		}
-	};
+	}
 	
+	function clearLocal () {
+	if(localStorage.length === 0){
+		alert("No Data.")
+	}else{
+		localStorage.clear();
+		alert("Data Cleared.");
+		window.location.reload();
+		return false;
+	}	
+
+
+} 
 	
 	//Variable Defaults
 	var statusChoice = ["-MakeChoice-", "Ex", "Current", "Prospect"];
@@ -107,9 +120,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	var displayLink = $("showData");
 	displayLink.addEventListener("click", getData);
 	var clearButton = $("clearData");
-	clearButton.addEventListener("click", clearData);
-	var submitData = $("saveData");
-	submitData.addEventListener("click", saveData);
+	clearButton.addEventListener("click", clearLocal);
+	var save = $("storeData");
+	save.addEventListener("click", saveData);
 	
 	
 	

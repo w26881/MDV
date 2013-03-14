@@ -40,3 +40,32 @@ button {
 	padding:15px;
 	
 }
+
+form {
+	background:lightgrey;
+	outline:4px solid black;
+	padding:10px;
+
+}
+
+a {
+	color:blue;
+}
+
+input {
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(top, #FFF 0%, grey 95%);
+	box-shadow: 1px 1px grey;
+}
+
+legend {
+	font-family:Helvetica;
+	font-variant:normal;
+	font-weight:bold;
+	font-size:larger;
+}
+
+fieldset {
+	border-radius: 5px;
+	box-shadow: 1px 1px grey;
+}
