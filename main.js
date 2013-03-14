@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	function $(x){
 		var getElement = document.getElementById(x);
 		return getElement;
-	}
+	};
 	
 	function makeStatus(){
 		var formTag = document.getElementsByTagName("form"),
@@ -24,9 +24,78 @@ window.addEventListener("DOMContentLoaded", function() {
 			  makeSelectElement.appendChild(makeOptionElement);
 		}
 		selectLi.appendChild(makeSelectElement);
-	}
+	};
 	
+	function getCheckboxValue() {
+		if ($("single").checked) {
+			singleValue = "Yes";
+		}else{
+			single = "No";
+		}
+	};
 	
+	function toggleControls (n) {
+	switch(n){
+		case "on":
+		    $("relForm").style.display ="none";
+		   $("showData").style.display = "none";
+			$("clearData").style.display = "inline";
+			$("addNew").style.display = "inline";
+			$("saveData").style.display = "none";
+			break;
+		case "off":
+		    $("relForm").style.display ="block";
+		    $("showData").style.display = "inline";
+			$("clearData").style.display = "inline";
+			$("addNew").style.display = "none";
+			$("saveData").style.display = "inline";
+			$("items").style.display = "none";
+			break;  
+		 default:
+		    return false;    
+		}
+	};
+	
+	function saveData() {
+		var id = Math.floor(Math.random()*10001);
+		getCheckboxValue();
+		var item 				= {};
+			item.name 		= ["Name: ", $("name").value];
+			item.attraction			= ["Attraction Level: ", $("attraction").value];
+			item.single		= ["Single: ", singleValue];
+			item.birthdate		= ["Birth Date: ", $("birthdate").value];
+			item.notes		= ["Notes: ", $("notes").value];
+
+			localStorage.setItem(id, JSON.stringify(item));
+			alert("Relationship Saved!");
+	};
+	
+	function getData() {
+		toggle("on");
+		var makeDiv = document.createElement("div");
+		makeDiv.setAttribute("id", "items");
+		var makeList = document.createElement("ul");
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv);
+		
+		$("items").style.display = "block";
+		for(var i=0, j=localStorage.length; i<j; i++) {
+			var getLi = document.createElement("li");
+			getList.appendChild(getLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			// Parse
+			var obj = JSON.parse(value);
+			var getSubList = document.createElement("ul");
+			getLi.appendChild(getSubList);
+			for (var x in obj) {
+				var getSubLi = document.createElement("li");
+				getSubList.appendChild(getSubLi);
+				var subTxt = obj[x][0]+" "+obj[x][1];
+				getSubLi.innerHTML = subTxt;
+			}
+		}
+	};
 	
 	
 	//Variable Defaults
@@ -35,7 +104,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	
 	//Set Link and Submit Events
-	//var displayLink = $("");
+	var displayLink = $("showData");
+	displayLink.addEventListener("click", getData);
+	var clearButton = $("clearData");
+	clearButton.addEventListener("click", clearData);
+	var submitData = $("saveData");
+	submitData.addEventListener("click", saveData);
 	
 	
 	
