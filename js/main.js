@@ -101,6 +101,58 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	
+	function makeItemLinks(key, linksLi){
+		var editLink = document.createElement("a");
+		editLink.href = "#";
+		editLink.key = key;
+		var editText = "Edit Relationship";
+		editLink.addEventListener("click", editItem);
+		editLink.innerHTML = editText;
+		linksLi.appendChild(editLink);
+
+		var deleteLink = document.createElement("a");
+		deleteLink.href = "#";
+		deleteLink.key = key;
+		var deleteText = "Delete Relationship";
+		deleteLink.addEventListener("click", deleteItem);
+		deleteLink.innerHTML = deleteText;
+		linksLi.appendChild(deleteLink);
+
+	}
+	
+	function deleteItem(key){
+		var ask = confirm("Delete This Relationship?")
+		if (ask){
+			localStorage.removeItem(this.key);
+			window.location.reload();
+			alert("Relationship Deleted.")
+		}else{
+			alert("Relationship NOT Deleted.")
+		}
+	}
+	
+	function editItem(){
+		var value = localStorage.getItem(this.key);
+		var item = JSON.parse(value);
+
+		toggleControls("off");
+		$("status").value = item.status[1];
+		$("name").value = item.name[1];
+		$("attraction").value = item.attraction[1];
+		$("birthdate").value = item.birthdate[1];
+		$("notes").value = item.notes[1];
+		if (item.single[1] == "Yes"){
+			$("single").setAttribute("checked", "checked");
+		}
+		save.removeEventListener("click", saveData);
+		$("storeData").value = "Edit Relationship";
+		var editSave = $("storeData");
+		editSave.addEventListener("click", validate);
+		editSave.key = this.key;
+	}
+	
+	
+	
 	function clearLocal () {
 	if(localStorage.length === 0){
 		alert("No Data.")
