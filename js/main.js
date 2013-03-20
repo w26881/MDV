@@ -1,4 +1,4 @@
-/*VFW Project 2
+/*VFW Project 3
 Kevin Tresemer
 VFW 1303*/
 
@@ -82,6 +82,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		$("items").style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++) {
 			var getLi = document.createElement("li");
+			var linksLi = document.createElement("li");
 			getList.appendChild(getLi);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
@@ -94,7 +95,9 @@ window.addEventListener("DOMContentLoaded", function() {
 				getSubList.appendChild(getSubLi);
 				var subTxt = obj[x][0]+" "+obj[x][1];
 				getSubLi.innerHTML = subTxt;
+				getSubLi.appendChild(linksLi);
 			}
+			makeItemLinks(localStorage.key(i), linksLi);
 		}
 	}
 	
