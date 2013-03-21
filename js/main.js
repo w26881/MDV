@@ -57,8 +57,12 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	
-	function saveData() {
-		var id = Math.floor(Math.random()*1000001);
+	function saveData(key) {
+		if(!key){
+			var id = Math.floor(Math.random()*1000001);
+		}else{
+			id = key;
+		}
 		getCheckboxValue();
 		var item 				= {};
 			item.status      = ["Status:", $("status").value];
@@ -109,6 +113,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
+		
+		var lineBreak = document.createElement("br");
+		linksLi.appendChild(lineBreak);
 
 		var deleteLink = document.createElement("a");
 		deleteLink.href = "#";
@@ -151,7 +158,57 @@ window.addEventListener("DOMContentLoaded", function() {
 		editSave.key = this.key;
 	}
 	
-	
+	function validate(eventData){
+		var getStatus = $("status");
+		var getName = $("name");
+		var getBirthdate = $("birthdate");
+		var getNotes = $("notes");
+
+		errorMsg.innerHTML = "";
+			getStatus.style.border = "1px solid black";
+			getName.style.border = "1px solid black";
+			getBirthdate.style.border = "1px solid black";
+			getNotes.style.border = "1px solid black";
+
+
+
+		var errorArray = [];
+
+
+		if(getStatus.value === "-Make Choice-"){
+			var statusError = "Please enter a status.";
+			getStatus.style.border = "2px solid red";
+			errorArray.push(statusError);
+		}
+		if(getName.value === ""){
+			var nameError = "Please enter a name.";
+			getName.style.border = "2px solid red";
+			errorArray.push(nameError);
+		}
+		if(getBirthdate.value === ""){
+			var birthdateError = "Please enter a birthdate.";
+			getBirthdate.style.border = "2px solid red";
+			errorArray.push(birthdateError);
+		}
+		if(getNotes.value === ""){
+			var notesError = "Please record notes.";
+			getNotes.style.border = "2px solid red";
+			errorArray.push(notesError);
+		}
+		if(errorArray.length >= 1){
+			for(var i=0, j=errorArray.length; i < j; i++){
+				var li = document.createElement("li");
+				li.innerHTML = errorArray[i];
+				errorMsg.appendChild(li);
+			}
+			eventData.preventDefault();
+			return false;
+		}else{
+			saveData(this.key);
+		}
+
+	}
+
 	
 	function clearLocal () {
 	if(localStorage.length === 0){
@@ -167,7 +224,8 @@ window.addEventListener("DOMContentLoaded", function() {
 } 
 	
 	//Variable Defaults
-	var statusChoice = ["-MakeChoice-", "Ex", "Current", "Prospect"];
+	var statusChoice = ["-Make Choice-", "Ex", "Current", "Prospect"];
+	var errorMsg = $("errors");
 	makeStatus();
 	
 	
@@ -177,7 +235,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var clearButton = $("clearData");
 	clearButton.addEventListener("click", clearLocal);
 	var save = $("storeData");
-	save.addEventListener("click", saveData);
+	save.addEventListener("click", validate);
 	
 	
 });
