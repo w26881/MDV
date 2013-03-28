@@ -78,6 +78,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	function getData() {
 		toggleControls("on");
+		if(localStorage.length === 0){
+			autoFillData();
+			alert("There is no data in Local Storage so default data was added.");
+		}
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
 		var getList = document.createElement("ul");
@@ -90,10 +94,10 @@ window.addEventListener("DOMContentLoaded", function() {
 			getList.appendChild(getLi);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
-			// Parse
 			var obj = JSON.parse(value);
 			var getSubList = document.createElement("ul");
 			getLi.appendChild(getSubList);
+			getImage(obj.status[1], getSubList);
 			for (var x in obj) {
 				var getSubLi = document.createElement("li");
 				getSubList.appendChild(getSubLi);
@@ -102,6 +106,21 @@ window.addEventListener("DOMContentLoaded", function() {
 				getSubLi.appendChild(linksLi);
 			}
 			makeItemLinks(localStorage.key(i), linksLi);
+		}
+	}
+	
+	function getImage(statusName, getSubList){
+		var imageLi = document.createElement('li');
+		getSubList.appendChild(imageLi);
+		var newImage = document.createElement('img');
+		var setSrc = newImage.setAttribute("src", "images/"+ statusName +".png");
+		imageLi.appendChild(newImage);
+	}
+	
+	function autoFillData(){
+		for(var n in json){
+			var id = Math.floor(Math.random()*1000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
 	
@@ -132,9 +151,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		if (ask){
 			localStorage.removeItem(this.key);
 			window.location.reload();
-			alert("Relationship Deleted.")
+			alert("Relationship Deleted.");
 		}else{
-			alert("Relationship NOT Deleted.")
+			alert("Relationship NOT Deleted.");
 		}
 	}
 	
