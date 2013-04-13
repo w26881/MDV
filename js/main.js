@@ -6,14 +6,14 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	
 	//getElementById Function
-	function $(x){
+	function re(x){
 		var getElement = document.getElementById(x);
 		return getElement;
 	}
 	
 	function makeStatus(){
 		var formTag = document.getElementsByTagName("form"),
-			  selectLi = $("select"),
+			  selectLi = re("select"),
 			  makeSelectElement = document.createElement("select");
 			  makeSelectElement.setAttribute("id", "status");
 		for (var i=0, j=statusChoice.length; i<j; i++){
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	
 	function getCheckboxValue() {
-		if ($("single").checked) {
+		if (re("single").checked) {
 			singleValue = "Yes";
 		}else{
 			single = "No";
@@ -38,19 +38,19 @@ window.addEventListener("DOMContentLoaded", function() {
 	function toggleControls (x) {
 	switch(x){
 		case "on":
-		    $("relForm").style.display ="none";
-		    $("showData").style.display = "none";
-			$("clearData").style.display = "inline";
-			$("addNew").style.display = "inline";
-			$("storeData").style.display = "none";
+		    re("relForm").style.display ="none";
+		    re("showData").style.display = "none";
+			re("clearData").style.display = "inline";
+			re("addNew").style.display = "inline";
+			re("storeData").style.display = "none";
 			break;
 		case "off":
-		    $("relForm").style.display ="block";
-		    $("showData").style.display = "inline";
-			$("clearData").style.display = "inline";
-			$("addNew").style.display = "none";
-			$("storeData").style.display = "inline";
-			$("items").style.display = "none";
+		    re("relForm").style.display ="block";
+		    re("showData").style.display = "inline";
+			re("clearData").style.display = "inline";
+			re("addNew").style.display = "none";
+			re("storeData").style.display = "inline";
+			re("items").style.display = "none";
 			break;  
 		 default:
 		    return false;    
@@ -65,12 +65,12 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 		getCheckboxValue();
 		var item 				= {};
-			item.status      = ["Status:", $("status").value];
-			item.name 		= ["Name: ", $("name").value];
-			item.attraction	= ["Attraction Level: ", $("attraction").value];
+			item.status      = ["Status:", re("status").value];
+			item.name 		= ["Name: ", re("name").value];
+			item.attraction	= ["Attraction Level: ", re("attraction").value];
 			item.single		= ["Single: ", singleValue];
-			item.birthdate	= ["Birth Date: ", $("birthdate").value];
-			item.notes		= ["Notes: ", $("notes").value];
+			item.birthdate	= ["Birth Date: ", re("birthdate").value];
+			item.notes		= ["Notes: ", re("notes").value];
 
 			localStorage.setItem(id, JSON.stringify(item));
 			alert("Relationship Saved!");
@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		var getList = document.createElement("ul");
 		makeDiv.appendChild(getList);
 		document.body.appendChild(makeDiv);
-		$("items").style.display = "block";
+		re("items").style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++) {
 			var getLi = document.createElement("li");
 			var linksLi = document.createElement("li");
@@ -162,26 +162,26 @@ window.addEventListener("DOMContentLoaded", function() {
 		var item = JSON.parse(value);
 
 		toggleControls("off");
-		$("status").value = item.status[1];
-		$("name").value = item.name[1];
-		$("attraction").value = item.attraction[1];
-		$("birthdate").value = item.birthdate[1];
-		$("notes").value = item.notes[1];
+		re("status").value = item.status[1];
+		re("name").value = item.name[1];
+		re("attraction").value = item.attraction[1];
+		re("birthdate").value = item.birthdate[1];
+		re("notes").value = item.notes[1];
 		if (item.single[1] == "Yes"){
-			$("single").setAttribute("checked", "checked");
+			re("single").setAttribute("checked", "checked");
 		}
 		save.removeEventListener("click", saveData);
-		$("storeData").value = "Edit Relationship";
-		var editSave = $("storeData");
+		re("storeData").value = "Edit Relationship";
+		var editSave = re("storeData");
 		editSave.addEventListener("click", validate);
 		editSave.key = this.key;
 	}
 	
 	function validate(eventData){
-		var getStatus = $("status");
-		var getName = $("name");
-		var getBirthdate = $("birthdate");
-		var getNotes = $("notes");
+		var getStatus = re("status");
+		var getName = re("name");
+		var getBirthdate = re("birthdate");
+		var getNotes = re("notes");
 
 		errorMsg.innerHTML = "";
 			getStatus.style.border = "1px solid black";
@@ -244,16 +244,16 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	//Variable Defaults
 	var statusChoice = ["-Make Choice-", "Ex", "Current", "Prospect"];
-	var errorMsg = $("errors");
+	var errorMsg = re("errors");
 	makeStatus();
 	
 	
 	//Set Link and Submit Events
-	var displayLink = $("showData");
+	var displayLink = re("showData");
 	displayLink.addEventListener("click", getData);
-	var clearButton = $("clearData");
+	var clearButton = re("clearData");
 	clearButton.addEventListener("click", clearLocal);
-	var save = $("storeData");
+	var save = re("storeData");
 	save.addEventListener("click", validate);
 	
 	
