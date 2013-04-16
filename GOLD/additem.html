@@ -1,0 +1,53 @@
+<!doctype html>
+<!--MIU Project 1
+	  Kevin Tresemer
+	  MIU 1304
+-->
+<html>
+	<head>
+	
+		<meta charset="utf-8" />
+		<meta name="keywords" content="black book, relationships, " />
+		<meta name="description" content="Manage your special relationships with Little Black Book" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-Scalable=no, width=device-width" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<!--Page Title-->
+		<title>Little Black Book</title>
+		
+	</head>
+	<body>
+	
+		<!--Page Content Lives Here.-->
+		<form action="#" method="post" id="relForm" >
+          <fieldset>
+            <legend><h2>Add a Relationship</h2></legend>
+            <ul id = "errors"></ul>
+              <ul>
+              	<li id= "select"><label for="status">Status</label></li>
+              		<!--<select id="status">
+              			<option value="Ex">Ex</option>
+              			<option value="Current">Current</option>
+              			<option value="Prospect">Prospect</option>
+              		</select>-->
+              	
+                <li><label for="name" >Name:</label><input type="text" id="name" /></li>
+                <li><label for="attraction" >Attraction Level:</label><br /><input type="range" id="attraction" required min="0" max="250" value="0" step="10"  /></li>
+                <li><label for="birthdate" >Birth Date:</label><input type="date" id="birthdate" placeholder="mm/dd/yyyy" /></li>
+                <li><input type=checkbox checked value="Single" id="single" /><label for="single">Single</label></li>
+                <li><label for="notes" >Notes:</label><br /><textarea id="notes" placeholder="favorite flower, last gift given etc..."></textarea></li>
+              </ul>
+          
+          <input type="submit" name="save" id="storeData" value="Add This Relationship" />
+          
+          </fieldset>
+        </form>
+        
+            <small><a href="#" id="showData"><input type="button" name="show" id="showData" value="Display Data" /></a>
+				<a href="#" id="clearData"><input type="button" name="clear" id="clearData" value="Clear Stored Data" /></a>
+				<a href="additem.html" id="addNew" style="display:none;"><input type="button" name="start" id="addNew" value="Add New Relationship" /></a></small>
+				
+			<script type="text/javascript" src="js/json.js"></script>		
+            <script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
