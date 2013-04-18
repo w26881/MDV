@@ -7,22 +7,22 @@
 <head>
 
 	<meta charset="utf-8">
-	
+
 	<title>Little Black Book</title>
-	
+
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
-	
+
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" href="css/styles.css" type="text/css" />
-	
-	
+
+
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
@@ -38,11 +38,12 @@
 		<div data-role="content">
 
 	<!-- CTA -->
-			<div class="ui-grid-a" align=center>
-				<div class="ui-block-a"><a href="additem.html" Data-ajax="false"><img src="images/AddItem.png" height="80" width="80" /></a></div>
-				<div class="ui-block-b"><h3>Manage your<br> special relationships!</h3></div>
+			<div align=center>
+			<h3>Manage your special relationships!</h3>
+				<a href="additem.html" Data-ajax="false"><img src="images/AddItem.png"/></a>
 			</div>
-			
+			<br>
+
 			<!--News Stream Most Recent Activity at Top-->
 			<div data-role="collapsible" data-collapsed="true">
 					<h3>Activity Feed</h3>
@@ -67,7 +68,7 @@
 					</ul>
 				</div>
 				<br>
-			
+
 				<!-- Browse -->
 				<ul data-role="listview" Data-filter="true" data-theme="a">
 		    	<li data-role="list-divider">Browse By</li>
@@ -93,11 +94,11 @@
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
-			
+
 		</div>
 
     </div>		
@@ -110,32 +111,22 @@
 		</div>
 
 		<div data-role="content" >
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-					<ul data-role="listview" data-inset="true" data-filter="true">
-						<li><a href="#">
-						<img src="images/Current.png" height="80" width="80" />
-                        <h2>Current<p>Current relationship.</p></h2>
-                        </a></li>
-						<li><a href="#">
-						<img src="images/Ex.png" height="80" width="80" />
-                        <h2> Ex<p>Past relationships.</p></h2>
-                        </a></li>
-						<li><a href="#">
-						<img src="images/Prospect.png" height="80" width="80" />
-                        <h2> Prospects<p>Prospective relationships.</p></h2>
-                        </a></li>
-					</ul>
-				</div>
+			<div class="ui-grid-b" align=center>
+						<div class="ui-block-a"><div style="height:80px">Current<a href="#">
+						<img src="images/Current.png" height="80" width="80" /></div></a></div>
+						<div class="ui-block-b"><div style="height:80px">Ex<a href="#">
+						<img src="images/Ex.png" height="80" width="80" /></div> </a></div>
+						<div class="ui-block-c"><div style="height:80px">Prospects<a href="#">
+						<img src="images/Prospect.png" height="80" width="80" /></div></a></div>
 			</div>
 		</div>	
-		
+
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -159,13 +150,13 @@
 				</div>
 			</div>
 		</div>	
-		
+
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -198,13 +189,13 @@
 				</div>
 			</div>
 		</div>	
-		
+
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -233,13 +224,13 @@
 				</div>
 			</div>
 		</div>	
-		
+
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -263,13 +254,13 @@
 				</div>
 			</div>
 		</div>	
-		
+
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -297,12 +288,12 @@
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#info" data-icon="info">Info</a></li>
-						<li><a href="http://w26881.github.com/MDV/BRONZE" data-icon="alert">BRONZE APP</a></li>
+						<li><a href="http://w26881.github.com/MDV/GOLD" data-icon="alert">GOLD APP</a></li>
 					</ul>
 				</div>
 			</div>
     </div>
-			
+
 	<!-- JavaScript under here -->
 			<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 			<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
@@ -311,7 +302,3 @@
 
 </body>
 </html>
-
-
-
-
