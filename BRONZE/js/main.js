@@ -254,7 +254,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var clearButton = re("clearData");
 	clearButton.addEventListener("click", clearLocal);
 	var save = re("storeData");
-	save.addEventListener("click", storeData);
+	save.addEventListener("click", validate);
 	
 	
 });
