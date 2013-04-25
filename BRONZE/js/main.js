@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	
-	function saveData(key) {
+	function storeData(key) {
 		if(!key){
 			var id = Math.floor(Math.random()*1000001);
 		}else{
@@ -254,7 +254,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var clearButton = re("clearData");
 	clearButton.addEventListener("click", clearLocal);
 	var save = re("storeData");
-	save.addEventListener("click", validate);
+	save.addEventListener("click", storeData);
 	
 	
 });
