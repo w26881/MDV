@@ -19,9 +19,9 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" href="css/styles.css" type="text/css" />
-	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/themes/Red.min.css"/>
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -31,7 +31,7 @@
 
 	<div data-role="page" id="home">
 
-		<div data-role="header" data-position="fixed" data-theme="a">
+		<div data-role="header" data-position="fixed">
 			<h1>Little <br>Black Book</h1>
 			</div> 
 
@@ -45,7 +45,7 @@
 		</br>
 			
 				<!-- Browse -->
-				<ul data-role="listview" Data-filter="true" data-theme="a">
+				<ul data-role="listview" Data-filter="true">
 		    	<li data-role="list-divider">Browse By</li>
 		    		<li><a href= "#status">
 			    		<h2>Status</h2>
@@ -81,13 +81,15 @@
     <!-- Status Page-->
     <div data-role="page" id="status" data-add-back-btn="true" data-position="fixed">
 
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
     		<h1>Status</h1>
 		</div>
 
 		<div data-role="content" >
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
+				<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 					<ul data-role="listview" data-inset="true" data-filter="true">
 						<li><a href="#const">
 						<img src="images/Current.png" height="80" width="80" />
@@ -120,13 +122,15 @@
       <!-- Name Page-->
     <div data-role="page" id="name" data-add-back-btn="true" data-position="fixed">
 
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
     		<h1>Name</h1>
 		</div>
 
 		<div data-role="content" >
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
+				<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 					<ul data-role="listview" data-inset="true" data-filter="true">
 						<li>Relationship1</li>
 						<li>Relationship2</li>
@@ -150,13 +154,15 @@
       <!-- Attractiveness Page-->
     <div data-role="page" id="attraction" data-add-back-btn="true" data-position="fixed">
 
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
     		<h1>Attraction Level</h1>
 		</div>
 
 		<div data-role="content" >
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
+				<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 					<ul data-role="listview" data-inset="true" data-filter="true">
 						<li><a href="#const">
 						<img src="images/Small.png" height="80" width="80" />
@@ -189,13 +195,15 @@
       <!-- Availability Page-->
     <div data-role="page" id="availability" data-add-back-btn="true" data-position="fixed">
 
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
     		<h1>Availability</h1>
 		</div>
 
 		<div data-role="content" >
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
+				<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 					<ul data-role="listview" data-inset="true" data-filter="true">
 						<li><a href="#const">
 						<img src="images/Medium.png" height="80" width="80" />
@@ -224,13 +232,15 @@
       <!-- B-Day Page-->
     <div data-role="page" id="birthdate" data-add-back-btn="true" data-position="fixed">
 
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
     		<h1>Birthdate</h1>
 		</div>
 
 		<div data-role="content" >
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
+				<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 					<ul data-role="listview" data-inset="true" data-filter="true">
 						<li>Record1</li>
 						<li>Record2</li>
@@ -262,6 +272,9 @@
     
 	    <!-- Form Content -->
 	    <form action="" method="post" id="addrelationshipform">
+	    <div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
+				<br>
 	        	<h2>Relationship Information</h2>
 	        	<h4>* fields are required</h4>
 	        	<label for="status" id="select"> *Status:</label>
@@ -280,8 +293,8 @@
 			          <label for="date"> *Date Created: </label><input type="date" id="date" class="date required"placeholder="MM/DD/YYYY"/></br>
 			          </div>
 			          
-			          <input type="submit" id="saveData" value="Add This Relationship" data-theme="a"/>
-			          <input type="reset" value="Reset" data-theme="b"/>
+			          <input type="submit" id="saveData" value="Add This Relationship"/>
+			          <input type="reset" value="Reset"/>
 	    </form>  
 	    </div>
 	    
@@ -303,12 +316,15 @@
 	<!--Info Page-->
 	<div data-role="page" id="info" data-add-back-btn="true" data-filter="true">
 
-		<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-role="header" data-position="fixed">
     		<h1>Info</h1>
 		</div>
 
 		<div data-role="content">
-
+<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
+				<br>
+				<br>
 		<p>Kevin Tresemer: MIU Term 1304.</p>
 		
 		<h4>News: <a href="#news">Click Here</a></h4>
@@ -331,11 +347,13 @@
     </div>
     
     <!-- News Stream Page -->
-	<div data-role="page" id="news" data-add-back-btn="true" data-theme="b">
+	<div data-role="page" id="news" data-add-back-btn="true">
 
-		<div data-role="content" id="newsStream" data-theme="b">
+		<div data-role="content" id="newsStream">
 		<article>
 			<div id="stream">
+			<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 				<div data-role="fieldcontain">
 				<h3>Activity Feed</h3>
 				</div>
@@ -379,11 +397,13 @@
     </div>
     
     <!-- Under Construction -->
-	<div data-role="page" id="const" data-add-back-btn="true" data-theme="a">
+	<div data-role="page" id="const" data-add-back-btn="true">
 	
-		<div data-role="header" data-theme="a">
+		<div data-role="header">
 		<h1>Under Construction</h1>
 		</div>
+		<div class="ui-block-a"><a href="#home" Data-ajax="false"><img src="images/Prospect.png" height="50" width="50" /></a></div>
+				<br>
 		<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
