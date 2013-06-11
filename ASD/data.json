@@ -5,7 +5,7 @@ var json = {
 	"relationship1": {
 		"status": ["Status:", "Ex"],
 		"name": ["Name:", "Annelle"],
-		"tel": ["tel:", "123-173-1978"],
+		"tel": ["Tel:", "123-173-1978"],
 		"notes": ["Notes:", "Sterling Roses"],
 		
 
@@ -13,7 +13,7 @@ var json = {
 	"relationship2": {
 		"status": ["Status:", "Current"],
 		"name": ["Name:", "Danielle"],
-		"tel": ["tel:", "306-203-1992"],
+		"tel": ["Tel:", "306-203-1992"],
 		"notes": ["Notes:", "Peonies"],
 		
 
@@ -21,7 +21,7 @@ var json = {
 	"relationship3": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Natalie"],
-		"tel": ["tel:", "310-313-1987"],
+		"tel": ["Tel:", "310-313-1987"],
 		"notes": ["Notes:", "Red Wine"],
 		
 
@@ -29,7 +29,7 @@ var json = {
 	"relationship4": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Rebecca"],
-		"tel": ["tel:", "311-232-1990"],
+		"tel": ["Tel:", "311-232-1990"],
 		"notes": ["Notes:", "Hiking"],
 		
 
@@ -37,7 +37,7 @@ var json = {
 	"relationship5": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Sarah"],
-		"tel": ["tel:", "132-134-1987"],
+		"tel": ["Tel:", "132-134-1987"],
 		"notes": ["Notes:", "Movies"],
 		
 
@@ -45,7 +45,7 @@ var json = {
 	"relationship6": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Denise"],
-		"tel": ["tel:", "031-131-1991"],
+		"tel": ["Tel:", "031-131-1991"],
 		"notes": ["Notes:", "Concerts"],
 		
 
@@ -53,7 +53,7 @@ var json = {
 	"relationship7": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Rachel"],
-		"tel": ["tel:", "333-135-1989"],
+		"tel": ["Tel:", "333-135-1989"],
 		"notes": ["Notes:", "Jewelry"],
 		
 
@@ -61,7 +61,7 @@ var json = {
 	"relationship8": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Amanda"],
-		"tel": ["tel:", "304-139-1980"],
+		"tel": ["Tel:", "304-139-1980"],
 		"notes": ["Notes:", "The Beach"],
 		
 
@@ -69,7 +69,7 @@ var json = {
 	"relationship9": {
 		"status": ["Status:", "Ex"],
 		"name": ["Name:", "Jessica"],
-		"tel": ["tel:", "307-132-1984"],
+		"tel": ["Tel:", "307-132-1984"],
 		"notes": ["Notes:", "Travel"],
 		
 
@@ -77,7 +77,7 @@ var json = {
 	"relationship10": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Jennifer"],
-		"tel": ["tel:", "306-230-1988"],
+		"tel": ["Tel:", "306-230-1988"],
 		"notes": ["Notes:", "Dogs"],
 		
 
@@ -85,7 +85,7 @@ var json = {
 	"relationship11": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Kristen"],
-		"tel": ["tel:", "308-328-1987"],
+		"tel": ["Tel:", "308-328-1987"],
 		"notes": ["Notes:", "Cats"],
 		
 
@@ -93,7 +93,7 @@ var json = {
 	"relationship12": {
 		"status": ["Status:", "Ex"],
 		"name": ["Name:", "Julie"],
-		"tel": ["tel:", "302-034-1983"],
+		"tel": ["Tel:", "302-034-1983"],
 		"notes": ["Notes:", "Hydrangeas"],
 		
 
@@ -101,7 +101,7 @@ var json = {
 	"relationship13": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Molly"],
-		"tel": ["tel:", "03-07-1981"],
+		"tel": ["Tel:", "03-07-1981"],
 		"notes": ["Notes:", "Shopping"],
 		
 
@@ -109,7 +109,7 @@ var json = {
 	"relationship14": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Stephanie"],
-		"tel": ["tel:", "309-163-1982"],
+		"tel": ["Tel:", "309-163-1982"],
 		"notes": ["Notes:", "Working Out"],
 		
 
@@ -117,7 +117,7 @@ var json = {
 	"relationship15": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "McKenzie"],
-		"tel": ["tel:", "307-135-1982"],
+		"tel": ["Tel:", "307-135-1982"],
 		"notes": ["Notes:", "Politics"],
 		
 
@@ -125,7 +125,7 @@ var json = {
 	"relationship16": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Melissa"],
-		"tel": ["tel:", "301-032-1979"],
+		"tel": ["Tel:", "301-032-1979"],
 		"notes": ["Notes:", "Roses"],
 		
 
@@ -141,7 +141,7 @@ var json = {
 	"relationship18": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Shannon"],
-		"tel": ["tel:", "309-306-1988"],
+		"tel": ["Tel:", "309-306-1988"],
 		"notes": ["Notes:", "Dancing"],
 		
 
@@ -149,7 +149,7 @@ var json = {
 	"relationship19": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Ciera"],
-		"tel": ["tel:", "130-232-1985"],
+		"tel": ["Tel:", "130-232-1985"],
 		"notes": ["Notes:", "Dinner"],
 		
 
@@ -157,7 +157,7 @@ var json = {
 	"relationship20": {
 		"status": ["Status:", "Prospect"],
 		"name": ["Name:", "Veronica"],
-		"tel": ["tel:", "312-235-1983"],
+		"tel": ["Tel:", "312-235-1983"],
 		"notes": ["Notes:", "Drinks"],
 		
 
