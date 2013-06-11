@@ -1,0 +1,167 @@
+/*Kevin Tresemer
+	  ASD 1306*/
+
+var json = {
+	"relationship1": {
+		"status": ["Status:", "Ex"],
+		"name": ["Name:", "Annelle"],
+		"tel": ["tel:", "123-173-1978"],
+		"notes": ["Notes:", "Sterling Roses"],
+		
+
+	},
+	"relationship2": {
+		"status": ["Status:", "Current"],
+		"name": ["Name:", "Danielle"],
+		"tel": ["tel:", "306-203-1992"],
+		"notes": ["Notes:", "Peonies"],
+		
+
+	},
+	"relationship3": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Natalie"],
+		"tel": ["tel:", "310-313-1987"],
+		"notes": ["Notes:", "Red Wine"],
+		
+
+	},
+	"relationship4": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Rebecca"],
+		"tel": ["tel:", "311-232-1990"],
+		"notes": ["Notes:", "Hiking"],
+		
+
+	},
+	"relationship5": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Sarah"],
+		"tel": ["tel:", "132-134-1987"],
+		"notes": ["Notes:", "Movies"],
+		
+
+	},
+	"relationship6": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Denise"],
+		"tel": ["tel:", "031-131-1991"],
+		"notes": ["Notes:", "Concerts"],
+		
+
+	},
+	"relationship7": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Rachel"],
+		"tel": ["tel:", "333-135-1989"],
+		"notes": ["Notes:", "Jewelry"],
+		
+
+	},
+	"relationship8": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Amanda"],
+		"tel": ["tel:", "304-139-1980"],
+		"notes": ["Notes:", "The Beach"],
+		
+
+	},
+	"relationship9": {
+		"status": ["Status:", "Ex"],
+		"name": ["Name:", "Jessica"],
+		"tel": ["tel:", "307-132-1984"],
+		"notes": ["Notes:", "Travel"],
+		
+
+	},
+	"relationship10": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Jennifer"],
+		"tel": ["tel:", "306-230-1988"],
+		"notes": ["Notes:", "Dogs"],
+		
+
+	},
+	"relationship11": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Kristen"],
+		"tel": ["tel:", "308-328-1987"],
+		"notes": ["Notes:", "Cats"],
+		
+
+	},
+	"relationship12": {
+		"status": ["Status:", "Ex"],
+		"name": ["Name:", "Julie"],
+		"tel": ["tel:", "302-034-1983"],
+		"notes": ["Notes:", "Hydrangeas"],
+		
+
+	},
+	"relationship13": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Molly"],
+		"tel": ["tel:", "03-07-1981"],
+		"notes": ["Notes:", "Shopping"],
+		
+
+	},
+	"relationship14": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Stephanie"],
+		"tel": ["tel:", "309-163-1982"],
+		"notes": ["Notes:", "Working Out"],
+		
+
+	},
+	"relationship15": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "McKenzie"],
+		"tel": ["tel:", "307-135-1982"],
+		"notes": ["Notes:", "Politics"],
+		
+
+	},
+	"relationship16": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Melissa"],
+		"tel": ["tel:", "301-032-1979"],
+		"notes": ["Notes:", "Roses"],
+		
+
+	},
+	"relationship17": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Ariana"],
+		"tel": ["tel:", "303-309-1989"],
+		"notes": ["Notes:", "Breakfast in Bed"],
+		
+
+	},
+	"relationship18": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Shannon"],
+		"tel": ["tel:", "309-306-1988"],
+		"notes": ["Notes:", "Dancing"],
+		
+
+	},
+	"relationship19": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Ciera"],
+		"tel": ["tel:", "130-232-1985"],
+		"notes": ["Notes:", "Dinner"],
+		
+
+	},
+	"relationship20": {
+		"status": ["Status:", "Prospect"],
+		"name": ["Name:", "Veronica"],
+		"tel": ["tel:", "312-235-1983"],
+		"notes": ["Notes:", "Drinks"],
+		
+
+	}
+
+
+};
