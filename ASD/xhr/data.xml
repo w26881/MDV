@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<status>Ex</status>
+		<name>Julie</name>
+		<tel>555-555-5555</tel>
+		<notes>Roses</notes>
+	</item>
+	<item>
+		<status>Ex</status>
+		<name>Katie</name>
+		<tel>555-555-5555</tel>
+		<notes>Daisies</notes>
+	</item>
+	<item>
+		<status>Prospect</status>
+		<name>Danielle</name>
+		<tel>555-555-5555</tel>
+		<notes>Peonies</notes>
+	</item>
+	<item>
+		<status>Prospect</status>
+		<name>Rachel</name>
+		<tel>555-555-5555</tel>
+		<notes>Jewelry</notes>
+	</item>
+	<item>
+		<status>Prospect</status>
+		<name>Annie</name>
+		<tel>555-555-5555</tel>
+		<notes>Coffee</notes>
+	</item>
+	<item>
+		<status>Ex</status>
+		<name>Amanda</name>
+		<tel>555-555-5555</tel>
+		<notes>Who cares?</notes>
+	</item>
+	<item>
+		<status>Current</status>
+		<name>Annelle</name>
+		<tel>555-555-5555</tel>
+		<notes>Sterling Roses</notes>
+	</item>
+</items>
