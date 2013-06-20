@@ -38,13 +38,13 @@ var autoFillData = function(){
 			"dataType":"json",
 			"success":function(data) {
 			console.log(data);
-				$.each(data.rows, function(index, rel) {
+				$.each(data.rows, function(index, info) {
 					var makeSubList = $('<div></div>')
 					var parsed = $(
-							'<p>' + "Status: " + rel.value.status  + '</p>' + 
-							'<p>' + "Name: " + rel.value.name + '</p>' + 
-							'<p>' + "Tel: " + rel.value.tel + '</p>' + 
-							'<p>' + "Notes: " + rel.value.notes + '</p>' +
+							'<p>' + "Status: " + info.value.status  + '</p>' + 
+							'<p>' + "Name: " + info.value.name + '</p>' + 
+							'<p>' + "Tel: " + info.value.tel + '</p>' + 
+							'<p>' + "Notes: " + info.value.notes + '</p>' +
 							'<br>'
 					);	
 					makeSubList.append(parsed).appendTo('#items');	
