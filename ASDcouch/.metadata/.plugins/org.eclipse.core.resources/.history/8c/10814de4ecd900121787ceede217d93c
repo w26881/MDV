@@ -35,11 +35,11 @@
 	
 			<div data-role="content">
 			
-				<!--<div data-role="fieldcontain">
+				<div data-role="fieldcontain">
 								<a href="#" data-role="button" id="current">View Current</a>
 								<a href="#" data-role="button" id="prospects">View Prospects</a>
 								<a href="#" data-role="button" id="ex">View Ex(s)</a>
-				</div>-->
+				</div>
 				<br>
 				<br>
 				<div align=center>
