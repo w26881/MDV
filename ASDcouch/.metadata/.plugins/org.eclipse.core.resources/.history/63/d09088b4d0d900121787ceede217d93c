@@ -1,0 +1,11 @@
+function(doc) {
+  if (doc.status.substr(0,9 === "prospect") {
+    emit(doc._id, {
+    	"status": doc.status,
+    	"name": doc.name,
+    	"tel": doc.tel,
+    	"notes": doc.notes
+    
+    });
+  }
+};
