@@ -32,83 +32,28 @@ var clearData = function(){
 		}
 };
 
-function autoFillData(){
-		$('#items').empty();
-  		$.ajax({
-			url: "_view/all",
-			type: 'GET',
-			dataType: 'json',
-			success: function(response){
-			console.log(response);
-	        	for (var i=0, j=response.relationship.length; i<j; i++){
-					var relData = response.relationship[i];
-					$(' '+
-						'<div class="relationship">'+
-							'<p>Status: '+ relData.status +'</p>'+
-							'<p>Name: '+ relData.name +'</p>'+
-							'<p>Tel: '+ relData.tel +'</p>'+
-							'<p>Notes: '+ relData.notes +'</p>'+
-						'</div>'
-					).appendTo('#items');
-				};
-			}
-		});
-};
-
-$('#current').on('click', function(){
-		$('#items').empty();
-		$.ajax({
-			url: "_view/current",
-			dataType: 'json',
-			success: function(data){
-				$.each(data.rows, function(index, current){
-				$(' '+
-						'<div class="relationship">'+
-							'<p>Status: '+ current.value.status +'</p>'+
-							'<p>Name: '+ current.value.name +'</p>'+
-							'<p>Tel: '+ current.value.tel +'</p>'+
-							'<p>Notes: '+ current.value.notes +'</p>'+
-						'</div>'
-					).appendTo('#items');
+var autoFillData = function(){
+	    $.ajax({
+			"url":"_view/status",
+			"dataType":"json",
+			"success":function(data) {
+			console.log(data);
+				$.each(data.rows, function(index, rel) {
+					var makeSubList = $('<div></div>')
+					var parsed = $(
+							'<p>' + "Status: " + rel.value.status  + '</p>' + 
+							'<p>' + "Name: " + rel.value.name + '</p>' + 
+							'<p>' + "Tel: " + rel.value.tel + '</p>' + 
+							'<p>' + "Notes: " + rel.value.notes + '</p>' +
+							'<br>'
+					);	
+					makeSubList.append(parsed).appendTo('#items');	
 				});
 			},
+
 		});
-});
-	
-$('#prospects').on('click', function(){
-		$('#items').empty();
-		$.ajax({
-			url: 'xhr/data.csv',
-			type: 'GET',
-			dataType: 'text',
-			success: function(response){
-				console.log('CSV Loaded');
-				console.log(response);
 
-				var lines = response.split('\n');
-				var keys = lines[0].split("|");
-
-				for (var i = 1; i < lines.length; i++) {
-					var row = lines[i]
-					var columns = row.split("|");
-					var string = '{';
-					for (var j = 0; j < columns.length; j++) {
-						string += '"' + keys[j] + '":"' + columns[j] + '",';
-					}
-					string = string.slice(0, -1);
-					string += '}';
-
-					var id = Math.floor(Math.random()*1000000);
-					localStorage.setItem(id, string);
-				}
-				alert('CSV Loaded');
-			},
-			error: function(response){
-				alert('Error loading CSV file.');
-				console.log(response);
-			}
-		});
-});
+};
 	
 var deleteItem = function(keyVar){
 		var ask = confirm("Are you sure?");

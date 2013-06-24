@@ -33,9 +33,7 @@ var clearData = function(){
 };
 
 var autoFillData = function(){
-	    $.ajax({
-			"url":"_view/status",
-			"dataType":"json",
+	    $.couch.db("asdproject").view("app/status", {
 			"success":function(data) {
 			console.log(data);
 				$.each(data.rows, function(index, rel) {
