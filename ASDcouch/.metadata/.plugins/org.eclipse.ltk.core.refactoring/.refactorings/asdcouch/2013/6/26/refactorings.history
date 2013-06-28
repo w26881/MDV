@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;asdcouch/app/_attachments/rels.html&apos; to &apos;item.html&apos;" description="Rename resource &apos;rels.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/_attachments/rels.html" name="item.html" stamp="1372317653491" updateReferences="true"/>
+</session>
