@@ -1,5 +1,0 @@
-function(doc) {
-  if (doc.status === "Ex") {
-    emit(doc.status.substr(2));
-  }
-};

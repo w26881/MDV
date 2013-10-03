@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>140A4805-383F-4464-BF7D-B89D8DD06ECB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>avfApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9E946918-C04B-47F4-A236-23055F2177BB</key>
+		<string>https://github.com/w26881/MDV.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>appDirectory/platforms/ios/avfApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9E946918-C04B-47F4-A236-23055F2177BB</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/w26881/MDV.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9E946918-C04B-47F4-A236-23055F2177BB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9E946918-C04B-47F4-A236-23055F2177BB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MDV</string>
+		</dict>
+	</array>
+</dict>
+</plist>
