@@ -1,3 +1,3 @@
 /*Kevin Tresemer
-	  AFW 1310*/
+	  AVF 1310*/
 	  
