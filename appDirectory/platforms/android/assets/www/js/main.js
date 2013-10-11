@@ -18,7 +18,7 @@ var instaOutput = function(info) {
     console.log(info);
     
     $.each(info.data, function(index, photo) {
-           var picture = "<li align=center><img src='" + photo.images.thumbnail.url + "' alt='" + photo.user.full_name + "' /></li>";
+           var picture = "<li align=center><img src='" + photo.images.standard_resolution.url + "' alt='" + photo.user.full_name + "' /></li>";
            $("#instagramOutput").append(picture);
            });
 };
@@ -38,11 +38,7 @@ $('#getWeather').on('click', function() {
 
            
            $("#weatherOutput")
-           .append("<li>" + "<p>" + "<img src='" +
-                   weatherImage + "'/><br/>" + "<h2>" +
-                   city + ", " + state + "</h2>" +
-                   "Current Temp: " + temp + "°F" + "<br/>" +
-                   "</p>" + "</li>");
+           .append("<li align=center>" + "<p>" + "<img src='" + weatherImage + "'/><br/>" + "<h1>" + city + ", " + state + "</h1>" + "Temperature: " + temp + "°F" + "<br/>" + "</p>" + "</li>");
            
            }
            });

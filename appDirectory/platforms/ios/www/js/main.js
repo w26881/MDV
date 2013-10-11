@@ -38,11 +38,7 @@ $('#getWeather').on('click', function() {
 
            
            $("#weatherOutput")
-           .append("<li>" + "<p>" + "<img src='" +
-                   weatherImage + "'/><br/>" + "<h2>" +
-                   city + ", " + state + "</h2>" +
-                   "Current Temp: " + temp + "°F" + "<br/>" +
-                   "</p>" + "</li>");
+           .append("<li align=center>" + "<p>" + "<img src='" + weatherImage + "'/><br/>" + "<h1>" + city + ", " + state + "</h1>" + "Temperature: " + temp + "°F" + "<br/>" + "</p>" + "</li>");
            
            }
            });
