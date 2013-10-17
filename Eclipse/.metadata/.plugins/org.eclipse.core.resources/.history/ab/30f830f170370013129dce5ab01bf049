@@ -38,7 +38,7 @@
 				<div data-role="fieldcontain">
                     <a href="#device" data-role="button" id="getDeviceInfo">Device</a>
                     <a href="#camera" data-role="button" id="getCamera">Camera</a>
-                    <a href="#weather" data-role="button" id="getWeather">Geo</a>
+                    <a href="#weather" data-role="button" id="getGeo">Geo</a>
                     <a href="#compass" data-role="button" id="getCompass">Compass</a>
 				</div>
                 <h3>Data APIs</h3>
