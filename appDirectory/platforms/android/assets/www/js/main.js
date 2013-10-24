@@ -69,26 +69,37 @@ function onFail(compassError) {
     alert('Compass Error: ' + compassError.code);
 }
 
+
 /*Instagram*/
 
 $('#getInstagram').on('click', function() {
-  var url = "https://api.instagram.com/v1/media/popular?callback=?&amp;client_id=6204a71b952a4411a5a448039fe4b23d&amp";
-  $.getJSON(url, instaOutput);
-});
+                      var success = function(position){
+                      var lat = position.coords.latitude;
+                      var lon = position.coords.longitude;
+                      
+                      var url = "https://api.instagram.com/v1/media/search?lat=" + lat + "&lng=" + lon + "&callback=?&amp;client_id=6204a71b952a4411a5a448039fe4b23d&amp";
+                      $.getJSON(url, instaOutput);
+                      }
+                      var error = function(error){
+                      alert(error.message)
+                      }
+                      navigator.geolocation.getCurrentPosition(success, error);
+                      });
 
-var instaOutput = function(info) {
-    
-    alert("instaOutput");
-    console.log(info);
-    
-    $.each(info.data, function(index, photo) {
-           var picture = "<li align=center><img src='" + photo.images.standard_resolution.url + "' alt='" + photo.user.full_name + "' /></li>";
-           $("#instagramOutput").append(picture);
-           });
-};
+                      var instaOutput = function(info) {
+                      
+                      alert("instaOutput");
+                      console.log(info);
+                      
+                      $.each(info.data, function(index, photo) {
+                             var picture = "<li align=center><img src='" + photo.images.standard_resolution.url + "' alt='" + photo.user.full_name + "' /></li>";
+                             $("#instagramOutput").append(picture);
+                             });
+                      };
+                    
 
 /*Weather/Geo*/
-$('#getWeather').on('click', function() {
+$('#weather').on('pageinit', function() {
                         
             var success = function(position){
             var lat = position.coords.latitude;

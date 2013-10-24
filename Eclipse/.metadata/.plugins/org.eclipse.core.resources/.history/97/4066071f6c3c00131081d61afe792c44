@@ -182,7 +182,8 @@
                 <a href="#week2" data-role="button">Week 2</a>
                 
                 <a href="#week3" data-role="button">Week 3</a>
-
+                
+                <a href="#week4" data-role="button">Week 4</a>
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
@@ -294,47 +295,7 @@
             </div>
             
             <div data-role="content">
-                <ol>
-                    <li>
-                        <p>
-                        What are the 'top selling' app categories in the U.S.? Japan? Great Britain?<br>
-                        <br>
-                        Looking at various statistics for the three countries in question it becomes apparent that “games” is the top app category across the board. Social networking and entertainment categories both seem to follow within the top 4 in all locations as well but games are king.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                        Based on your three answers above, what might you infer about each of the markets listed?<br>
-                        <br>
-                        This data leads me to believe that all three markets value gaming and entertainment when it comes to mobile applications.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                        What is the average cost and bandwidth limits per user (in general) in each of the three markets? How may this impact development?<br>
-                        <br>
-                        I found that the average costs for wireless data service were all around 60 dollars for 5 GB per month. This would impact development in that decisions would need to be made about whether or not the app would require connectivity to use it and optimizations would need to be made to prevent the app from being too data-hungry.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                        And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.<br>
-                        <br>
-                        My suggested strategy would be to develop a game and target all markets. The demand is there.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                        Price Comparisons of Wireline, Wireless and Internet Services in Canada and with Foreign Jurisdictions. (2013). Canadian Radio-television and Telecommunications Commission Retrieved October 20, 2013, from: http://www.crtc.gc.ca/eng/publications/reports/rp130422.htm<br>
-                        <br>
-                        App Annie analyzes the social networking category in the app stores. (2013). www.insidemobileapps.com Retrieved October 20, 2013, from: http://www.insidemobileapps.com/2013/03/07/app-annie-analyzes-the-social-networking-category-in-the-app-stores/<br>
-                        <br>
-                        Smartphone Apps in Europe: The 8th Mass Market Media Channel. (2011). The Flurry Blog Retrieved October 20, 2013, from: http://blog.flurry.com/?Tag=uk<br>
-                        <br>
-                        App Annie top 10 iPhone categories Japan. (2013). www.insidemobileapps.com Retrieved October 20, 2013, from: http://www.insidemobileapps.com/2013/01/28/app-annie-takes-an-depth-look-at-the-mobile-app-economy-in-japan/top-10-iphone-categories-japan/<br>
-                        </p>
-                    </li>
-                </ol>
+                
              
             </div>
             <div data-role="footer" data-position="fixed">
@@ -347,6 +308,25 @@
             </div>
         </div>
         
+        <div data-role="page" id="week4">
+            
+            <div data-role="header" data-position="fixed">
+                <h1>Week 4</h1>
+            </div>
+            
+            <div data-role="content">
+                
+               
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#research" id=researchButton data-icon="research">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 		
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/libs/jquery-1.10.1.min.js"></script>
