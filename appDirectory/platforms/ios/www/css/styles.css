@@ -16,7 +16,7 @@
 }
 
 #homeButtons {
-        background-color: maroon;
+        background-color: lightblue;
         border: 1px solid black;
         margin: 5px;
         padding: 5px;
@@ -29,4 +29,5 @@ h3{
         color: white;
         font-weight: normal;
 }
+
 
